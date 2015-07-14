@@ -3,7 +3,18 @@
 		<title>Cams super amazing blog</title>
 	</head>
 	<body>
-		<h1>Cams page</h1>
-		<p><strong>holler, legends!!</strong></p>
+		<h1> CAMS BLOG </h1>
+		<hr>
+		<div>
+			{% for post in posts %}
+				<div>
+					<h3> {{ post.title }}</h3>
+					<p> Published: {{ post.published_date }}</p>
+					<p> What it do: {{ post.text }}</p>
+					<p> From ya boy: {{ post.author }}</p>
+					<hr>
+				</div>
+			{% endfor %}
+		</div>
 	</body>
 </html>
